@@ -1,4 +1,4 @@
-# kroonstad-api/app.py
+# app.py
 from flask import Flask, jsonify
 from flask_cors import CORS
 from data import MOCK_DATA  # Import your mock data

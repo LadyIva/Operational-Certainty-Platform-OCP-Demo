@@ -1,4 +1,4 @@
-# kroonstad-api/data.py
+# data.py
 # A utility function to generate simple trend data
 def generate_trend(start, end, points, dip_day=20, dip_magnitude=-0.05):
     """Generates a list of dictionaries for a simple trend line."""
