@@ -4,8 +4,15 @@ from flask_cors import CORS
 from data import MOCK_DATA  # Import your mock data
 
 app = Flask(__name__)
-# Crucial: Enable CORS to allow the React frontend (on port 5173) to access this API (on port 5000).
-CORS(app)
+
+# Define the origins that are allowed to access this API
+allowed_origins = [
+    "http://localhost:5173",  # Local React dev server
+    "https://silke-ai-ocp-demo.netlify.app",  # Your live Netlify domain
+]
+
+# Crucial: Configure CORS to only allow the trusted origins above
+CORS(app, resources={r"/*": {"origins": allowed_origins}})
 
 
 @app.route("/api/dashboard", methods=["GET"])
