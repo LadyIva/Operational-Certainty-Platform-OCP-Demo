@@ -8,8 +8,7 @@ app = Flask(__name__)
 
 # Define the origins that are allowed to access this API
 allowed_origins = [
-    "http://localhost:5173",  # Local React dev server
-    "https://ocp-demo-silke-ai.netlify.app",  # Your live Netlify domain
+    "https://silke-ai-opc-demo.netlify.app",  # Your live Netlify domain (CRITICAL FIX)
 ]
 
 # Crucial: Configure CORS to only allow the trusted origins above
