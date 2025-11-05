@@ -7,8 +7,10 @@ from data import MOCK_DATA  # Import your mock data
 app = Flask(__name__)
 
 # Define the origins that are allowed to access this API
+# CRITICAL: Include the Netlify domain AND the Render API domain
 allowed_origins = [
-    "https://silke-ai-opc-demo.netlify.app",  # Your live Netlify domain (CRITICAL FIX)
+    "https://silke-ai-opc-demo.netlify.app",  # Your live Netlify domain
+    "https://operational-certainty-platform-ocp-demo.onrender.com",  # The API's own domain
 ]
 
 # Crucial: Configure CORS to only allow the trusted origins above
